@@ -91,7 +91,7 @@ a:hover {
 .slider-copy__attribute {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  text-align: center;
+  text-align: left;
   font-weight: 300;
   color: #babacf;
 }
@@ -105,8 +105,28 @@ a:hover {
 
 @media (min-width: 40em) {
   .slider-copy__quote {
+    position: relative;
+    z-index: 100;
     text-align: left;
-    width: 110%;
+    width: 130%;
+  }
+}
+
+@media (min-width: 64em) {
+  .slider-copy__quote {
+    font-size: 2rem;
+  }
+  .slider-copy__attribute {
+    font-size: 2rem;
+  }
+  .slider-copy__attribute span {
+    display: inline;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .slider-copy__attribute {
+    text-align: center;
   }
 }
 
@@ -174,7 +194,7 @@ a:hover {
 .slider-container {
   flex-flow: row-reverse;
   height: 100vh;
-  max-width: 70rem;
+  max-width: 75rem;
   padding: 2rem;
 }
 

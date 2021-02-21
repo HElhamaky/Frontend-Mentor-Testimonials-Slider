@@ -16,7 +16,7 @@
   &__attribute {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
-    text-align: center;
+    text-align: left;
     font-weight: 300;
     color: $GrayishBlue;
     span {
@@ -29,9 +29,30 @@
 
   @include breakpoint-up(medium) {
     &__quote {
+      position: relative;
+      z-index: 100;
       text-align: left;
-      width: 110%;
+      width: 130%;
     }
-    
+  }
+
+  @include breakpoint-up(large) {
+    &__quote {
+      font-size: $body-font;
+    }
+
+    &__attribute {
+      font-size: $body-font;
+
+      span {
+        display: inline;
+      }
+    }
+  }
+
+  @include breakpoint-down(small) {
+    &__attribute {
+      text-align: center;
+    }
   }
 }
