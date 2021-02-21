@@ -90,7 +90,7 @@ a:hover {
 
 .slider-copy__attribute {
   margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
   font-weight: 300;
   color: #babacf;
@@ -103,16 +103,26 @@ a:hover {
   color: #202046;
 }
 
+@media (min-width: 40em) {
+  .slider-copy__quote {
+    text-align: left;
+    width: 110%;
+  }
+}
+
 .slider-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-flow: column;
   position: relative;
-  background: center/90% no-repeat url(../../images/pattern-bg.svg);
+  background: 30% 15%/100% no-repeat url(../../images/pattern-bg.svg);
 }
 
 .slider-image__image img {
   width: 100%;
   margin: auto;
-  box-shadow: 0px 10px 50px #5c5454;
+  box-shadow: 0px 10px 50px #cccccc;
 }
 
 .slider-image__image--hidden {
@@ -125,23 +135,22 @@ a:hover {
 
 .slider-image__buttons {
   position: relative;
-  position: absolute;
-  bottom: 3rem;
+  bottom: 2rem;
   width: 6rem;
-  height: 3rem;
+  height: 2.5rem;
   background-color: white;
   border-radius: 2rem;
-  box-shadow: 0px 5px 50px #272323;
+  box-shadow: 0px 5px 50px #ebe4e4;
 }
 
 .slider-image__buttons--prev {
   left: 1.3rem;
-  top: 0.3rem;
+  top: 0;
 }
 
 .slider-image__buttons--next {
   right: 1.3rem;
-  top: 0.2rem;
+  top: 0;
 }
 
 .slider-image__button {
@@ -153,15 +162,25 @@ a:hover {
   transform: scale(1.2, 1.2);
 }
 
+@media (min-width: 40em) {
+  .slider-image {
+    align-items: flex-start;
+  }
+  .slider-image__buttons {
+    left: 1rem;
+  }
+}
+
 .slider-container {
   flex-flow: row-reverse;
   height: 100vh;
-  max-width: 50rem;
+  max-width: 70rem;
+  padding: 2rem;
 }
 
 .slider-container .slider-image {
   flex: 1 0 0;
-  padding: 4rem;
+  padding: 3rem;
 }
 
 .slider-container .slider-image img {
@@ -184,7 +203,7 @@ a:hover {
     max-width: 24rem;
   }
   .slider-container .slider-copy {
-    max-width: 24rem;
+    max-width: 27rem;
     font-size: 1rem;
   }
 }

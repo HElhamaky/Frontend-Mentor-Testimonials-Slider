@@ -1,10 +1,11 @@
 .slider-container {
   flex-flow: row-reverse;
   height: 100vh;
-  max-width: 50rem;
+  max-width: 70rem;
+  padding: 2rem;
   .slider-image {
     flex: 1 0 0;
-    padding: 4rem;
+    padding: 3rem;
     img {
       width: 100%;
       margin: auto;
@@ -17,13 +18,15 @@
     padding: 1.5rem;
     max-width: 95%;
   }
+  
+
   @include breakpoint-down(small) {
     flex-flow: column;
     .slider-image {
       max-width: 24rem;
     }
     .slider-copy {
-      max-width: 24rem;
+      max-width: 27rem;
       font-size: $mobile-font;
     }
   }

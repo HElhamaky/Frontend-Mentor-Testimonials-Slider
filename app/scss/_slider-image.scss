@@ -1,13 +1,16 @@
 .slider-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-flow: column;
   position: relative;
-  background: center / 90% no-repeat url(../../images/pattern-bg.svg);
+  background: 30% 15% / 100% no-repeat url(../../images/pattern-bg.svg);
 
   &__image {
     img {
       width: 100%;
       margin: auto;
-      box-shadow: 0px 10px 50px rgb(92, 84, 84);
+      box-shadow: 0px 10px 50px hsl(0, 0%, 80%);
     }
     &--hidden {
       display: none;
@@ -19,21 +22,20 @@
 
   &__buttons {
     position: relative;
-    position: absolute;
-    bottom: 3rem;
+    bottom: 2rem;
     width: 6rem;
-    height: 3rem;
+    height: 2.5rem;
     background-color: $White;
     border-radius: 2rem;
-    box-shadow: 0px 5px 50px rgb(39, 35, 35);
+    box-shadow: 0px 5px 50px rgb(235, 228, 228);
 
     &--prev {
       left: 1.3rem;
-      top: 0.3rem;
+      top: 0;
     }
     &--next {
       right: 1.3rem;
-      top: 0.2rem;
+      top: 0;
     }
   }
 
@@ -45,5 +47,10 @@
     }
   }
 
- 
+  @include breakpoint-up(medium) {
+    align-items: flex-start;
+    &__buttons {
+      left: 1rem;
+    }
+  }
 }
