@@ -1,0 +1,49 @@
+.slider-image {
+  flex-flow: column;
+  position: relative;
+  background: center / 90% no-repeat url(../../images/pattern-bg.svg);
+
+  &__image {
+    img {
+      width: 100%;
+      margin: auto;
+      box-shadow: 0px 10px 50px rgb(92, 84, 84);
+    }
+    &--hidden {
+      display: none;
+    }
+    &--visible {
+      animation: fadeVisibility 800ms;
+    }
+  }
+
+  &__buttons {
+    position: relative;
+    position: absolute;
+    bottom: 3rem;
+    width: 6rem;
+    height: 3rem;
+    background-color: $White;
+    border-radius: 2rem;
+    box-shadow: 0px 5px 50px rgb(39, 35, 35);
+
+    &--prev {
+      left: 1.3rem;
+      top: 0.3rem;
+    }
+    &--next {
+      right: 1.3rem;
+      top: 0.2rem;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    width: 15%;
+    &:hover {
+      transform: scale(1.2, 1.2);
+    }
+  }
+
+ 
+}

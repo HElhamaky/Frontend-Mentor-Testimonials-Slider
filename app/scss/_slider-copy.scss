@@ -1,0 +1,29 @@
+.slider-copy {
+  background: top / 20% no-repeat url(../../images/pattern-quotes.svg);
+
+  &--hidden {
+    display: none;
+  }
+
+  &--visible {
+    animation: fadeVisibility 800ms;
+  }
+
+  &__quote {
+    text-align: center;
+  }
+
+  &__attribute {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 300;
+    color: $GrayishBlue;
+    span {
+      margin-bottom: 0.2rem;
+      display: block;
+      font-weight: 700;
+      color: $DarkBlue;
+    }
+  }
+}
